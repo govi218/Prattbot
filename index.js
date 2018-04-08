@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const processMessage = require('./processMessage');
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const request = require('request');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
