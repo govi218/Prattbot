@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const processMessage = require('./processMessage');
-const PAGE_ACCESS_TOKEN = "EAAChvUBM0tUBAJPUjgcuEhp0oGHYoVZArQpB1CP2jZAAByB86tXRWohn8eTwdZATuOh0d7sMQtlmWfb0bBvEmsoJXUhC7ZBZBWtXTG4VkjYesYCk0NHYFEIHQrE31mpR7iNjU436JTQcrnEpWJovxVIZB1ovF1iBbPWneWHMejq3c9yYCZCEJQV";
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
