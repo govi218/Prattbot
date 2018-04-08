@@ -5,7 +5,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.listen(1337, () => console.log('Webhook server is listening, port 1337'));
+app.listen(process.env.PORT || 1337, () => console.log('Webhook server is listening, port 1337'));
 
 // Creates the endpoint for our webhook 
 app.post('/webhook', (req, res) => {  
