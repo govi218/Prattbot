@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const processMessage = require('./processMessage');
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const PAGE_ACCESS_TOKEN = "EAAChvUBM0tUBAJPUjgcuEhp0oGHYoVZArQpB1CP2jZAAByB86tXRWohn8eTwdZATuOh0d7sMQtlmWfb0bBvEmsoJXUhC7ZBZBWtXTG4VkjYesYCk0NHYFEIHQrE31mpR7iNjU436JTQcrnEpWJovxVIZB1ovF1iBbPWneWHMejq3c9yYCZCEJQV";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,7 +24,7 @@ app.post('/webhook', (req, res) => {
         // will only ever contain one message, so we get index 0
         let webhook_event = entry.messaging[0];
         console.log(webhook_event);
-                
+
         // Get the sender PSID
         let sender_psid = webhook_event.sender.id;
         console.log('Sender PSID: ' + sender_psid);  
